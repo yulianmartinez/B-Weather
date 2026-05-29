@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.ymd.bweather"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.bold.bweather"

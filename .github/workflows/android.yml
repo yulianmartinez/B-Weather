@@ -34,5 +34,11 @@ jobs:
           echo "WEATHER_API_KEY=$WEATHER_API_KEY" > local.properties
         fi
 
-    - name: Run Unit Tests and Kover Coverage
-      run: ./gradlew testDebugUnitTest koverHtmlReportDebug
+    - name: Run Android Lint
+      run: ./gradlew lintDebug
+
+    - name: Run Unit Tests
+      run: ./gradlew testDebugUnitTest
+
+    - name: Generate Kover Coverage Report
+      run: ./gradlew koverHtmlReportDebug
