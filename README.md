@@ -102,6 +102,16 @@ Para ejecutar todos los tests y generar el reporte de cobertura al mismo tiempo,
 
 ---
 
+## Integración Continua (CI)
+
+El proyecto está configurado con flujos automatizados utilizando **GitHub Actions**. Con cada integración a la rama principal (`master` o `main`), el pipeline ejecuta los siguientes pasos:
+
+1. **Análisis Estático (Lint):** Verifica la calidad del código y mejores prácticas usando Android Lint (`./gradlew lintDebug`).
+2. **Ejecución de Tests:** Corre todos los tests unitarios y de componentes de la aplicación (`./gradlew testDebugUnitTest`).
+3. **Reporte de Cobertura:** Genera el reporte final de Kover para garantizar los estándares de calidad del proyecto (`./gradlew koverHtmlReportDebug`).
+
+---
+
 ## Diseño de aplicación
 
 En esta sección se muestran las capturas de pantalla del diseño de la aplicación. 
@@ -111,3 +121,12 @@ En esta sección se muestran las capturas de pantalla del diseño de la aplicaci
 | ![Splash](./screens/screen_splash.jpeg) | ![Buscador](./screens/screen_search.jpeg)  |
 | ![Clima](./screens/screen_weather.jpeg) | ![Ajustes](./screens/screen_settings.jpeg) |
 
+---
+
+## Herramientas de IA y Productividad Utilizadas
+
+Con el objetivo de optimizar la calidad del código, acelerar el desarrollo y mantener una documentación técnica clara y consistente, este proyecto fue apoyado por distintas herramientas de inteligencia artificial y automatización:
+
+* **Antigravity (Gemini):** Utilizado como AI Pair Programmer para apoyar la redacción de documentación técnica avanzada y como complementación de pruebas unitarias, contribuyendo significativamente al aumento de la cobertura de testing.
+* **Gitdiagram:** Empleado para modelar y generar de forma programática los diagramas de arquitectura modular basados en MVI, permitiendo mantener una representación visual clara, escalable y sincronizada con la estructura del proyecto.
+* **ChatGPT:** Utilizado como asistente creativo y técnico para la generación conceptual del branding visual de la aplicación, incluyendo el diseño inicial del ícono principal y apoyo en decisiones de experiencia de usuario y presentación visual.
