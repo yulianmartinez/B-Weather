@@ -1,0 +1,4 @@
+com.bold.feature.settings.test.settings-mergeDebugUnitTestResources-0 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/intermediates/incremental/debugUnitTest/mergeDebugUnitTestResources/merged.dir
+com.bold.feature.settings.test.settings-mergeDebugUnitTestResources-1 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/intermediates/incremental/debugUnitTest/mergeDebugUnitTestResources/stripped.dir
+com.bold.feature.settings.test.settings-debugUnitTest-2 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/intermediates/merged_res/debugUnitTest/mergeDebugUnitTestResources
+gradleHome-0 /Users/yulian/.gradle

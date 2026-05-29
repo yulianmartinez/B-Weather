@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml:2:13-83
+INJECTED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml:2:13-83
+	package
+		INJECTED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml
+	xmlns:android
+		ADDED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml:2:23-81
+uses-sdk
+INJECTED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml reason: use-sdk injection requested
+INJECTED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml
+INJECTED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml
+	android:targetSdkVersion
+		INJECTED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml
+	android:minSdkVersion
+		INJECTED from /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1726731827542000087.xml

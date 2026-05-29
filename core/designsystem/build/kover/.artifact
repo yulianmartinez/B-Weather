@@ -1,0 +1,14 @@
+:core:designsystem
+core/designsystem/src/main/java
+core/designsystem/src/main/kotlin
+core/designsystem/src/debug/java
+core/designsystem/src/debug/kotlin
+core/designsystem/src/release/java
+core/designsystem/src/release/kotlin
+
+core/designsystem/build/intermediates/built_in_kotlinc/debug/compileDebugKotlin/classes
+core/designsystem/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes
+core/designsystem/build/intermediates/built_in_kotlinc/release/compileReleaseKotlin/classes
+core/designsystem/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes
+
+core/designsystem/build/kover/bin-reports/testDebugUnitTest.ic

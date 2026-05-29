@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+raw loading
+raw splash
+string app_name
+string english
+string feels_like
+string humidity
+string language
+string max_temp
+string min_temp
+string retry
+string search_city_prompt
+string search_hint
+string settings
+string spanish
+string temperature_unit
+string upcoming_days
+string visibility
+string wind

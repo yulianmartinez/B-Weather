@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bold.feature.settings.presentation.screen.SettingsScreenTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-05-29T06:17:43.441Z" hostname="MacBook-Pro-de-Yulian.local" time="5.111">
+  <properties/>
+  <testcase name="clickingLanguageDropdownSelectsOption" classname="com.bold.feature.settings.presentation.screen.SettingsScreenTest" time="4.825"/>
+  <testcase name="clickingBackButtonTriggersNavigateBack" classname="com.bold.feature.settings.presentation.screen.SettingsScreenTest" time="0.092"/>
+  <testcase name="clickingTemperatureDropdownSelectsOption" classname="com.bold.feature.settings.presentation.screen.SettingsScreenTest" time="0.126"/>
+  <testcase name="displaysCurrentSettings" classname="com.bold.feature.settings.presentation.screen.SettingsScreenTest" time="0.067"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">B-Weather</string>
+    <string name="search_hint">Buscar ciudad...</string>
+    <string name="settings">Ajustes</string>
+    <string name="humidity">Humedad</string>
+    <string name="wind">Viento</string>
+    <string name="feels_like">Sensación</string>
+    <string name="upcoming_days">Próximos días</string>
+    <string name="search_city_prompt">Busca una ciudad para ver el clima</string>
+    <string name="retry">Reintentar</string>
+    <string name="language">Idioma</string>
+    <string name="spanish">Español</string>
+    <string name="english">Inglés</string>
+    <string name="temperature_unit">Unidad de temperatura</string>
+    <string name="visibility">Visibilidad</string>
+    <string name="max_temp">Max</string>
+    <string name="min_temp">Min</string>
+</resources>
