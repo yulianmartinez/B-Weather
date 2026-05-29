@@ -3,6 +3,7 @@ package com.bold.feature.home.presentation.screen
 import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -27,7 +28,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
+import com.bold.core.designsystem.R
 import com.bold.core.designsystem.component.BWeatherLoading
+import com.bold.core.model.weather.Weather
 import com.bold.feature.home.presentation.component.CurrentWeatherSection
 import com.bold.feature.home.presentation.component.ForecastSection
 import com.bold.feature.home.presentation.state.HomeIntent
@@ -69,7 +72,6 @@ fun HomeScreenContent(
         Column(
             modifier = Modifier.fillMaxSize()
         ) {
-            // Header with Gradient, Title, Settings, and Search
             WeatherHeader(
                 searchQuery = state.searchQuery,
                 isSearching = state.isSearching,
@@ -82,7 +84,6 @@ fun HomeScreenContent(
                 onNavigateToSettings = onNavigateToSettings
             )
 
-            // Main Content
             Box(modifier = Modifier.fillMaxSize().weight(1f)) {
                 if (state.error != null && state.weather == null) {
                     Column(
@@ -105,70 +106,91 @@ fun HomeScreenContent(
                     val isLandscape = configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
 
                     if (isLandscape) {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .padding(bottom = 8.dp)
-                        ) {
-                            CurrentWeatherSection(
-                                weather = weather,
-                                useCelsius = state.useCelsius,
-                                Modifier
-                                    .weight(1f)
-                                    .fillMaxSize()
-                                    .verticalScroll(rememberScrollState()),
-                            )
-
-                            Spacer(modifier = Modifier.width(16.dp))
-
-                            ForecastSection(
-                                forecast = weather.forecast,
-                                useCelsius = state.useCelsius,
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .padding(top = 24.dp)
-                                    .fillMaxSize(),
-                            )
-                        }
+                        ContentLandscape(weather, state)
                     } else {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .verticalScroll(rememberScrollState())
-                                .padding(bottom = 32.dp)
-                        ) {
-                            CurrentWeatherSection(
-                                weather = weather,
-                                useCelsius = state.useCelsius
-                            )
-
-                            Spacer(modifier = Modifier.height(8.dp))
-
-                            ForecastSection(
-                                forecast = weather.forecast,
-                                useCelsius = state.useCelsius
-                            )
-                        }
+                        ContentPortrait(weather, state)
                     }
                 } ?: run {
-                    Column(
-                        modifier = Modifier.align(Alignment.Center),
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        Icon(
-                            imageVector = WeatherIcons.Search,
-                            contentDescription = stringResource(com.bold.core.designsystem.R.string.search_hint),
-                            tint = colorScheme.onSurfaceVariant,
-                            modifier = Modifier.padding(bottom = 16.dp)
-                        )
-                        Text(
-                            text = stringResource(com.bold.core.designsystem.R.string.search_city_prompt),
-                            style = MaterialTheme.typography.bodyLarge,
-                            color = colorScheme.onSurfaceVariant
-                        )
-                    }
+                    ContentEmpty()
                 }
             }
         }
+    }
+}
+
+@Composable
+fun ContentLandscape(
+    weather: Weather,
+    state: HomeState
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(bottom = 8.dp)
+    ) {
+        CurrentWeatherSection(
+            weather = weather,
+            useCelsius = state.useCelsius,
+            Modifier
+                .weight(1f)
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState()),
+        )
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        ForecastSection(
+            forecast = weather.forecast,
+            useCelsius = state.useCelsius,
+            modifier = Modifier
+                .weight(1f)
+                .padding(top = 24.dp)
+                .fillMaxSize(),
+        )
+    }
+}
+
+@Composable
+fun ContentPortrait(
+    weather: Weather,
+    state: HomeState
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(bottom = 32.dp)
+    ) {
+        CurrentWeatherSection(
+            weather = weather,
+            useCelsius = state.useCelsius
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        ForecastSection(
+            forecast = weather.forecast,
+            useCelsius = state.useCelsius
+        )
+    }
+}
+
+@Composable
+private fun BoxScope.ContentEmpty() {
+    Column(
+        modifier = Modifier.align(Alignment.Center),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Icon(
+            imageVector = WeatherIcons.Search,
+            contentDescription = stringResource(R.string.search_hint),
+            tint = colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
+        Text(
+            text = stringResource(R.string.search_city_prompt),
+            style = MaterialTheme.typography.bodyLarge,
+            color = colorScheme.onSurfaceVariant
+        )
     }
 }

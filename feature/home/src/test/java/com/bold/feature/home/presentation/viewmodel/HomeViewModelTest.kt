@@ -14,6 +14,7 @@ import com.bold.feature.home.presentation.state.HomeIntent
 import com.bold.feature.home.util.MainDispatcherRule
 import io.mockk.coEvery
 import io.mockk.mockk
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
@@ -73,8 +74,6 @@ class HomeViewModelTest {
 
         // Then
         viewModel.state.test {
-            // Dado que UnconfinedTestDispatcher ejecuta el init inmediatamente,
-            // el primer item emitido ya contiene el estado exitoso
             val state = awaitItem()
             assertFalse(state.isLoading)
             assertNotNull(state.weather)
@@ -109,9 +108,6 @@ class HomeViewModelTest {
         
         // Then
         viewModel.state.test {
-            // Because of UnconfinedTestDispatcher, the state is updated instantly 
-            // when handleIntent is called. We trigger it inside the test block 
-            // to capture the latest state.
             viewModel.handleIntent(HomeIntent.SelectLocation(lat, lon))
             
             val finalState = expectMostRecentItem()
@@ -123,6 +119,7 @@ class HomeViewModelTest {
         }
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `UpdateSearchQuery intent should debounce and emit results`() = runTest {
         // Given
@@ -143,9 +140,6 @@ class HomeViewModelTest {
         
         // When
         viewModel.state.test {
-            // Unconfined dispatcher allows us to skip the real delay if we advanceTime
-            // or simply because tests are fast, but debounce uses delay(500).
-            // We need to use advanceTimeBy to trigger the debounce
             viewModel.handleIntent(HomeIntent.UpdateSearchQuery("B"))
             viewModel.handleIntent(HomeIntent.UpdateSearchQuery("Bo"))
             viewModel.handleIntent(HomeIntent.UpdateSearchQuery("Bog"))
@@ -221,7 +215,6 @@ class HomeViewModelTest {
         
         // When
         viewModel.state.test {
-            // First set a query and results
             viewModel.handleIntent(HomeIntent.UpdateSearchQuery("Bogota"))
             
             // Then select location

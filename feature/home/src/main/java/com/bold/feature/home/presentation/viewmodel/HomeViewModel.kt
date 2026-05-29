@@ -4,14 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bold.core.common.result.Resource
 import com.bold.feature.home.domain.usecase.GetCurrentWeatherUseCase
-import com.bold.feature.home.presentation.state.HomeEffect
 import com.bold.feature.home.presentation.state.HomeIntent
 import com.bold.feature.home.presentation.state.HomeState
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -30,9 +26,6 @@ class HomeViewModel(
 
     private val _state = MutableStateFlow(HomeState())
     val state: StateFlow<HomeState> = _state.asStateFlow()
-
-    private val _effect = MutableSharedFlow<HomeEffect>()
-    val effect: SharedFlow<HomeEffect> = _effect.asSharedFlow()
 
     private var searchJob: Job? = null
 
@@ -94,7 +87,6 @@ class HomeViewModel(
                     }
                     is Resource.Error -> {
                         _state.update { it.copy(isSearching = false, searchResults = emptyList()) }
-                        _effect.emit(HomeEffect.ShowToast("Error searching: ${resource.message}"))
                     }
                 }
             }
@@ -121,7 +113,6 @@ class HomeViewModel(
                     }
                     is Resource.Error -> {
                         _state.update { it.copy(isLoading = false, error = resource.message) }
-                        _effect.emit(HomeEffect.ShowToast(resource.message))
                     }
                 }
             }

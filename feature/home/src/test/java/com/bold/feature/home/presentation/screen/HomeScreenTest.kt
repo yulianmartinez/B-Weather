@@ -2,7 +2,6 @@ package com.bold.feature.home.presentation.screen
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
-import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.bold.core.model.location.LocationData
@@ -32,9 +31,6 @@ class HomeScreenTest {
             )
         }
 
-        // ProgressBar doesn't always have a clear text/content description out of the box unless assigned, 
-        // but we can check that it exists via some other node or add a test tag. 
-        // We know that when loading, there's no "Search City" prompt or error text
         composeTestRule.onNodeWithText("Error:").assertDoesNotExist()
     }
 
@@ -50,8 +46,6 @@ class HomeScreenTest {
         }
 
         composeTestRule.onNodeWithText("Error: $errorMessage").assertIsDisplayed()
-        // Default text on the retry button from stringResource is typically "Retry" or equivalent in Spanish
-        // We rely on the layout structure having an error text.
     }
 
     @Test

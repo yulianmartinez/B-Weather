@@ -21,7 +21,7 @@ class SettingsRepositoryImplTest {
 
     private val testDispatcher = UnconfinedTestDispatcher()
 
-    private lateinit var dataStoreScope: kotlinx.coroutines.CoroutineScope
+    private lateinit var dataStoreScope: CoroutineScope
     private lateinit var testFile: File
     private lateinit var dataStore: DataStore<Preferences>
     private lateinit var repository: SettingsRepositoryImpl
