@@ -18,9 +18,8 @@ La aplicación está organizada y fuertemente modularizada en las siguientes cap
 
 ---
 
-## Módulos y Arquitectura
-
-Debido al enfoque de escalabilidad, el código está dividido en múltiples módulos de Gradle (`:app`, `:core`, y `:feature`), los cuales a su vez se agrupan en las siguientes capas de arquitectura. 
+## Diagrama arquitectura
+Debido al enfoque de escalabilidad, el código está dividido en múltiples módulos de Gradle (`:app`, `:core`, y `:feature`), los cuales a su vez se agrupan en las siguientes capas de arquitectura.
 
 ![Diagrama de Arquitectura](./screens/architecture_diagram.png)
 
@@ -60,6 +59,20 @@ La capa de dominio es el núcleo de la aplicación. Es completamente independien
 
 ---
 
+## Configuración y Ejecución
+
+Para poder compilar y probar este proyecto correctamente en tu entorno local, es necesario configurar tu propia API Key de WeatherAPI. Por motivos de seguridad, las credenciales no se exponen en el repositorio.
+
+1. Regístrate en [WeatherAPI](https://www.weatherapi.com/) y obtén una API Key gratuita.
+2. En la raíz del proyecto, abre (o crea) el archivo `local.properties`.
+3. Agrega la siguiente línea sustituyendo por tu clave real:
+   ```properties
+   WEATHER_API_KEY=aqui_tu_clave_api_weather
+   ```
+4. Sincroniza Gradle en Android Studio y ejecuta la aplicación.
+
+---
+
 ## Test
 
 Los tests de la aplicación se crearon para garantizar su calidad, arquitectura y evitar regresiones. Se utilizan diferentes tipos de pruebas:
@@ -82,8 +95,10 @@ Se ha utilizado el plugin **Kover** para medir la cobertura del código. Se han 
 * **Dominio:** Pruebas unitarias de todos los Use Cases.
 * **Data:** Pruebas para los repositorios y Mappers verificando la manipulación de excepciones y conversiones de red.
 
-Para generar el reporte de cobertura, ejecuta:
-`./gradlew koverHtmlReportDebug`
+Para ejecutar todos los tests y generar el reporte de cobertura al mismo tiempo, utiliza el siguiente comando en la terminal:
+```bash
+./gradlew testDebugUnitTest koverHtmlReportDebug
+```
 
 ---
 
@@ -91,9 +106,8 @@ Para generar el reporte de cobertura, ejecuta:
 
 En esta sección se muestran las capturas de pantalla del diseño de la aplicación. 
 
-|                                    |                                        |
-|------------------------------------|----------------------------------------|
-| ![Splash](./screens/splash.png)    | ![Buscador](./screens/search.png)      |
-| ![Clima](./screens/weather.png)    | ![Ajustes](./screens/settings.png)     |
+|                                         |                                            |
+|-----------------------------------------|--------------------------------------------|
+| ![Splash](./screens/screen_splash.jpeg) | ![Buscador](./screens/screen_search.jpeg)  |
+| ![Clima](./screens/screen_weather.jpeg) | ![Ajustes](./screens/screen_settings.jpeg) |
 
-> *Nota: Recuerda agregar la carpeta `screens` con las imágenes correspondientes en el repositorio para que se visualicen correctamente.*

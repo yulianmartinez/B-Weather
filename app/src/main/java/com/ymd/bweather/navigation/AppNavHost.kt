@@ -28,7 +28,7 @@ fun AppNavHost(
             }
         )
         homeScreen(
-            onNavigateToSettings = { navController.navigate("settings") }
+            onNavigateToSettings = { navController.navigate(AppDestinations.SETTINGS) }
         )
         settingsScreen(
             onNavigateBack = { navController.popBackStack() }
