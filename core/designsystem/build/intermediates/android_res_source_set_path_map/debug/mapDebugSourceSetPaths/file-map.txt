@@ -1,9 +1,0 @@
-com.bold.core.designsystem-pngs-0 /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/generated/res/pngs/debug
-com.bold.core.designsystem-updated_navigation_xml-1 /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/generated/updated_navigation_xml/debug
-com.bold.core.designsystem-mergeDebugResources-2 /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
-com.bold.core.designsystem-mergeDebugResources-3 /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
-com.bold.core.designsystem-debug-4 /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/merged_res/debug/mergeDebugResources
-com.bold.core.designsystem-debug-5 /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/build/intermediates/packaged_res/debug/packageDebugResources
-com.bold.core.designsystem-debug-6 /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/src/debug/res
-com.bold.core.designsystem-main-7 /Users/yulian/AndroidStudioProjects/BWeather/core/designsystem/src/main/res
-gradleHome-0 /Users/yulian/.gradle

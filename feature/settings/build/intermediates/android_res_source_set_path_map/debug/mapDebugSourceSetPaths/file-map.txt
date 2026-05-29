@@ -1,9 +1,0 @@
-com.bold.feature.settings-pngs-0 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/generated/res/pngs/debug
-com.bold.feature.settings-updated_navigation_xml-1 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/generated/updated_navigation_xml/debug
-com.bold.feature.settings-mergeDebugResources-2 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
-com.bold.feature.settings-mergeDebugResources-3 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
-com.bold.feature.settings-debug-4 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/intermediates/merged_res/debug/mergeDebugResources
-com.bold.feature.settings-debug-5 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/build/intermediates/packaged_res/debug/packageDebugResources
-com.bold.feature.settings-debug-6 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/src/debug/res
-com.bold.feature.settings-main-7 /Users/yulian/AndroidStudioProjects/BWeather/feature/settings/src/main/res
-gradleHome-0 /Users/yulian/.gradle

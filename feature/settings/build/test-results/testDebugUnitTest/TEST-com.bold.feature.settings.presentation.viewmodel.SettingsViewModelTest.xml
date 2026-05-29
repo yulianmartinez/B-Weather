@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bold.feature.settings.presentation.viewmodel.SettingsViewModelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-05-29T06:17:48.555Z" hostname="MacBook-Pro-de-Yulian.local" time="0.118">
-  <properties/>
-  <testcase name="UpdateLanguage intent should call repository" classname="com.bold.feature.settings.presentation.viewmodel.SettingsViewModelTest" time="0.078"/>
-  <testcase name="UpdateTemperatureUnit intent should call usecase" classname="com.bold.feature.settings.presentation.viewmodel.SettingsViewModelTest" time="0.024"/>
-  <testcase name="init should load user settings from repository" classname="com.bold.feature.settings.presentation.viewmodel.SettingsViewModelTest" time="0.016"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

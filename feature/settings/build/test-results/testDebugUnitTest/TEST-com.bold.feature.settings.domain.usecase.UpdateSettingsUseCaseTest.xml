@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bold.feature.settings.domain.usecase.UpdateSettingsUseCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-05-29T06:17:42.226Z" hostname="MacBook-Pro-de-Yulian.local" time="1.027">
-  <properties/>
-  <testcase name="invoke should call updateTemperatureUnit on repository" classname="com.bold.feature.settings.domain.usecase.UpdateSettingsUseCaseTest" time="1.027"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

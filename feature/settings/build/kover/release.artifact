@@ -1,9 +1,0 @@
-:feature:settings
-feature/settings/src/main/java
-feature/settings/src/main/kotlin
-feature/settings/src/release/java
-feature/settings/src/release/kotlin
-
-feature/settings/build/intermediates/built_in_kotlinc/release/compileReleaseKotlin/classes
-feature/settings/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes
-
